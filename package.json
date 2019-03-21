@@ -1,39 +1,84 @@
 {
   "name": "jm-electron",
+  "description": "jm with electron",
+  "author": "mygzb.com",
   "version": "0.1.0",
   "private": true,
+  "main": "./dist/main.js",
+  "scripts": {
+    "dev": "jm start",
+    "build": "jm build",
+    "analyze": "jm analyze",
+    "run": "electron .",
+    "package": "yarn build && electron-builder build"
+  },
+  "jm": {
+    "electron": true
+  },
+  "browserslist": "Chrome 69",
+  "build": {
+    "appId": "com.mygzb.electron",
+    "productName": "JMElectron",
+    "copyright": "Copyright © 2019 ${author}",
+    "directories": {
+      "buildResources": "resources",
+      "output": "output"
+    },
+    "files": [
+      "dist",
+      "package.json"
+    ],
+    "dmg": {
+      "contents": [{
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ]
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "rpm",
+        "snap",
+        "AppImage"
+      ],
+      "category": "Development"
+    }
+  },
   "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-hot-loader": "^4.3.12",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-hot-loader": "^4.8.0",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@gdjiami/cli": "^0.2.3",
-    "@types/react": "^16.4.13",
-    "@types/react-dom": "^16.0.7",
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.2",
     "@types/react-hot-loader": "^4.1.0",
     "@types/webpack-env": "^1.13.9",
+    "electron": "^4.1.0",
+    "electron-builder": "^20.39.0",
     "husky": "^1.3.1",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0"
-  },
-  "scripts": {
-    "start": "jm start",
-    "build": "jm build",
-    "serve": "jm serve",
-    "analyze": "jm analyze",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
   },
-  "jm": {
-    "proxy": {},
-    "importPlugin": []
-  },
-  "browserslist": "last 2 versions",
   "optionalDependencies": {}
 }
