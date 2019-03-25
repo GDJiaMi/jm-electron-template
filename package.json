@@ -29,7 +29,8 @@
       "package.json"
     ],
     "dmg": {
-      "contents": [{
+      "contents": [
+        {
           "x": 130,
           "y": 220
         },
@@ -58,16 +59,21 @@
     }
   },
   "dependencies": {
+    "@gdjiami/hooks": "^0.2.1",
+    "app-root-path": "^2.1.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-hot-loader": "^4.8.0",
+    "styled-components": "^4.1.3",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@gdjiami/cli": "^0.2.3",
+    "@types/app-root-path": "^1.2.4",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.2",
     "@types/react-hot-loader": "^4.1.0",
+    "@types/styled-components": "^4.1.12",
     "@types/webpack-env": "^1.13.9",
     "electron": "^4.1.0",
     "electron-builder": "^20.39.0",
