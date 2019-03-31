@@ -1,0 +1,15 @@
+/**
+ * 全局样式
+ */
+body {
+  margin: 0;
+}
+
+html,
+body #root {
+  height: 100%;
+}
+
+html {
+  font-family: "PingFang SC", "Microsoft YaHei", "SF Pro SC", "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}

@@ -1,3 +1,6 @@
 {
-  "extends": ["@gdjiami/cli/lib/tslint.json"]
+  "extends": ["@gdjiami/cli/lib/tslint.json"],
+  "rules": {
+    "no-parameter-properties": false
+  }
 }

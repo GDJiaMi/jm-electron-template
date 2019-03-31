@@ -29,8 +29,7 @@
       "package.json"
     ],
     "dmg": {
-      "contents": [
-        {
+      "contents": [{
           "x": 130,
           "y": 220
         },
@@ -59,17 +58,22 @@
     }
   },
   "dependencies": {
-    "@gdjiami/hooks": "^0.2.1",
     "app-root-path": "^2.1.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-hot-loader": "^4.8.0",
-    "styled-components": "^4.1.3",
+    "electron-devtools-installer": "^2.2.4",
+    "@gdjiami/jsonrpc-electron": "^0.1.1",
     "tslib": "^1.9.3"
   },
+  "optionalDependencies": {
+    "react": "^16.8.4",
+    "@gdjiami/hooks": "^0.4.1",
+    "react-dom": "npm:@hot-loader/react-dom",
+    "react-hot-loader": "^4.8.0",
+    "styled-components": "^4.1.3"
+  },
   "devDependencies": {
-    "@gdjiami/cli": "^0.2.3",
+    "@gdjiami/cli": "^0.4.0",
     "@types/app-root-path": "^1.2.4",
+    "@types/electron-devtools-installer": "^2.2.0",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.2",
     "@types/react-hot-loader": "^4.1.0",
@@ -85,6 +89,5 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  },
-  "optionalDependencies": {}
+  }
 }

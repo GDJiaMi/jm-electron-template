@@ -1,9 +1,5 @@
-/**
- * App entry
- */
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from '~/containers/Home'
-import '~/css/app.css'
+import Home from '~/containers/Home'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import registerPage from './registerPage'
+
+registerPage(Home)

@@ -1,9 +1,12 @@
-import { app, BrowserWindow } from 'electron'
-import { getPageUrl } from '~/main/utils'
+/**
+ * 主进程入口
+ */
+import { app } from 'electron'
 
-console.log('hi')
+import bootstrap from './bootstrap'
+import { openPage } from './utils'
 
 app.on('ready', () => {
-  const win = new BrowserWindow({ width: 500, height: 500 })
-  win.loadURL(getPageUrl('index'))
+  bootstrap()
+  openPage('index')
 })

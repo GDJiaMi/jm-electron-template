@@ -1,8 +1,16 @@
 /**
  * commons helpers
  */
+import { remote } from 'electron'
 
-export function log(content: string) {
-  // tslint:disable-next-line:no-console
-  console.log(content)
+export function getCurrentWindow() {
+  return remote.getCurrentWindow()
+}
+
+/**
+ * 打开工具栏
+ */
+export function openDevTool() {
+  const win = getCurrentWindow()
+  win.webContents.openDevTools()
 }

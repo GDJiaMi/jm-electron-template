@@ -1,11 +1,5 @@
-/**
- * Admin entry
- */
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Admin from '~/containers/Login'
-import '~/css/admin.css'
+import Login from '~/containers/Login'
 
-console.log('hi')
+import registerPage from './registerPage'
 
-ReactDOM.render(<Admin />, document.getElementById('root'))
+registerPage(Login)
