@@ -6,7 +6,7 @@
   "private": true,
   "main": "./dist/main.js",
   "scripts": {
-    "dev": "jm start",
+    "start": "jm start",
     "build": "jm build",
     "analyze": "jm analyze",
     "run": "electron .",
@@ -29,7 +29,8 @@
       "package.json"
     ],
     "dmg": {
-      "contents": [{
+      "contents": [
+        {
           "x": 130,
           "y": 220
         },
@@ -58,14 +59,14 @@
     }
   },
   "dependencies": {
+    "@gdjiami/jsonrpc-electron": "^0.1.1",
     "app-root-path": "^2.1.0",
     "electron-devtools-installer": "^2.2.4",
-    "@gdjiami/jsonrpc-electron": "^0.1.1",
     "tslib": "^1.9.3"
   },
   "optionalDependencies": {
-    "react": "^16.8.4",
     "@gdjiami/hooks": "^0.4.1",
+    "react": "^16.8.4",
     "react-dom": "npm:@hot-loader/react-dom",
     "react-hot-loader": "^4.8.0",
     "styled-components": "^4.1.3"

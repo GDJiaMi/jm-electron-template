@@ -1,6 +1,6 @@
 import { resolve } from 'app-root-path'
 import { BrowserViewConstructorOptions, BrowserWindow } from 'electron'
-import pageConfigs from '~/pages'
+import pageConfigs from '~/page.json'
 
 export const WindowHost =
   process.env.NODE_ENV === 'development'
