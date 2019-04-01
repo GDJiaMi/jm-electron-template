@@ -1,14 +1,12 @@
 {
   "index": {
-    "width": 360,
-    "minWidth": 360,
-    "height": 780,
+    "width": 330,
+    "minWidth": 330,
+    "height": 680,
     "minHeight": 500,
     "frame": false,
     "minimizable": false,
-    "maximizable": false,
-    "alwaysOnTop": true,
-    "skipTaskbar": true
+    "maximizable": false
   },
   "login": {},
   "webview": {}

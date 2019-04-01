@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components/macro'
+import WindowBar from '~/components/WindowBar'
 
 export interface HeaderProps {
   avatar?: string
@@ -8,18 +9,8 @@ export interface HeaderProps {
   desc?: string
 }
 
-const Avatar = styled.div<{ src: string }>`
-  width: 60px;
-  height: 60px;
-  border-radius: 60px;
-  background-image: url(${props => props.src});
-`
-
 const Container = styled.header`
-  /* 整个header都可以拖拽 */
-  -webkit-app-region: drag;
   background-color: #2a87dd;
-  padding-top: 20px;
 `
 const UserInfo = styled.div`
   padding: 5px;
@@ -29,6 +20,12 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 10px;
+`
+const Avatar = styled.div<{ src: string }>`
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-image: url(${props => props.src});
 `
 const Name = styled.h1`
   color: white;
@@ -45,6 +42,7 @@ const Desc = styled.div`
 const Header: FC<HeaderProps> = props => {
   return (
     <Container>
+      <WindowBar />
       <UserInfo>
         <Avatar src={props.avatar || require('./sample.jpg')} />
         <Info>

@@ -1,0 +1,19 @@
+.window-buttons {
+  -webkit-app-region: no-drag;
+  display: flex;
+}
+
+.window-button {
+  padding: 4px;
+  font-size: 13px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.window-button:hover,
+.window-button:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
