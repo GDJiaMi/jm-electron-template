@@ -6,11 +6,15 @@
 .window-button {
   padding: 4px;
   font-size: 13px;
-  color: white;
   display: flex;
   align-items: center;
   justify-items: center;
   cursor: pointer;
+  color: black;
+}
+
+.window-buttons.light .window-button {
+  color: white;
 }
 
 .window-button:hover,

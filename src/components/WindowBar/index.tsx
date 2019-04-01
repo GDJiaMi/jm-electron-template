@@ -9,6 +9,11 @@ const Container = styled.div`
   width: 100%;
   height: 25px;
 `
+const Title = styled.div`
+  font-size: 13px;
+  padding: 3px 6px;
+  color: #111;
+`
 const Right = styled.div`
   position: absolute;
   top: 0;
@@ -20,16 +25,20 @@ const Left = styled(Right)`
 `
 
 export interface WindowBarProps extends WindowButtonsProps {
+  title?: React.ReactNode
   left?: React.ReactNode
   right?: React.ReactNode
   children?: React.ReactNode
 }
 
 export const WindowBar: FC<WindowBarProps> = props => {
-  const { left, right, ...other } = props
+  const { left, title, right, ...other } = props
   return (
     <Container>
-      {!!left && <Left>{left}</Left>}
+      <Left>
+        {!!title && <Title>{title}</Title>}
+        {left}
+      </Left>
       <Right>
         {right}
         <WindowButtons {...other} />
@@ -38,4 +47,5 @@ export const WindowBar: FC<WindowBarProps> = props => {
   )
 }
 
+export { WindowButtons }
 export default WindowBar

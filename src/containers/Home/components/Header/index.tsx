@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
 import styled from 'styled-components/macro'
-import WindowBar from '~/components/WindowBar'
+import WindowBar, { WindowButtons } from '~/components/WindowBar'
+import { openPage } from '~/utils'
 
+import { ReactComponent as MenuIcon } from './menu.svg'
 export interface HeaderProps {
   avatar?: string
   name: string
@@ -39,10 +41,18 @@ const Desc = styled.div`
   margin-top: 8px;
 `
 
+const openSettings = () => {
+  openPage('settings')
+}
+
 const Header: FC<HeaderProps> = props => {
   return (
     <Container>
-      <WindowBar />
+      <WindowBar>
+        <WindowButtons.Button onClick={openSettings}>
+          <MenuIcon />
+        </WindowButtons.Button>
+      </WindowBar>
       <UserInfo>
         <Avatar src={props.avatar || require('./sample.jpg')} />
         <Info>

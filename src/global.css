@@ -6,10 +6,12 @@ body {
 }
 
 html,
-body #root {
+body,
+#root {
   height: 100%;
 }
 
 html {
-  font-family: "PingFang SC", "Microsoft YaHei", "SF Pro SC", "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'SF Pro SC', 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue',
+    'Helvetica', 'Arial', sans-serif;
 }

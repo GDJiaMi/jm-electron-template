@@ -1,5 +1,6 @@
 import { remote, BrowserWindow } from 'electron'
 import React from 'react'
+import { cls } from '~/utils'
 
 import { ReactComponent as CloseIcon } from './close.svg'
 import { ReactComponent as MaximizeIcon } from './maximize.svg'
@@ -11,6 +12,7 @@ export interface WindowButtonsProps {
   onMinimize?: () => false | void
   onMaximize?: () => false | void
   onClose?: () => false | void
+  light?: boolean
 }
 
 interface State {
@@ -23,6 +25,10 @@ interface State {
  */
 export default class WindowButtons extends React.PureComponent<WindowButtonsProps, State> {
   public static Button = WindowButton
+  public static defaultProps = {
+    light: true,
+  }
+
   public state: State
   private win: BrowserWindow
 
@@ -36,9 +42,11 @@ export default class WindowButtons extends React.PureComponent<WindowButtonsProp
   }
 
   public render() {
+    const { light } = this.props
     const { minimizable, maximizable } = this.state
+
     return (
-      <div className="window-buttons">
+      <div className={cls({ light }, 'window-buttons')}>
         {this.props.children}
         {minimizable && (
           <WindowButton onClick={this.handleMinimize}>

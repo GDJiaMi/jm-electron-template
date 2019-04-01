@@ -9,5 +9,13 @@
     "maximizable": false
   },
   "login": {},
-  "webview": {}
+  "webview": {},
+  "settings": {
+    "width": 720,
+    "height": 480,
+    "frame": false,
+    "resizable": false,
+    "minimizable": false,
+    "maximizable": false
+  }
 }
